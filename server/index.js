@@ -4,7 +4,14 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({ origin: ["http://localhost:5173", "http://127.0.0.1:5173"] }));
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://staff-sync-hrm.vercel.app"
+  ]
+}));
 app.use(express.json());
 
 app.get("/", (_req, res) => res.json({ message: "StaffSync HRM Backend is running!" }));
