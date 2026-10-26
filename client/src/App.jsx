@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Users, CalendarCheck, BriefcaseBusiness, Award, LogOut, Megaphone, UserRound, Clock3, GraduationCap, Check, X, Plus, Trash2, Pencil, ArrowRight, ShieldCheck } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = "https://staffsync-hrm-9s08.onrender.com/api";
 const readToken = () => localStorage.getItem("staffsync_token") || "";
 async function api(path, options = {}) {
   const headers = { "Content-Type": "application/json", ...(options.headers || {}) };
